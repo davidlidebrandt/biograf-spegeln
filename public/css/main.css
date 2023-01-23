@@ -20,13 +20,17 @@ body {
 
 .header, .footer {
     background-color: var(--dark-c);
-    padding: 0.5rem 1rem;
+    padding: 1rem 3rem;
     color: var(--lightest-c);
 }
 
 .header ul, .footer ul {
     list-style: none;
     padding: 0;
+}
+
+.main-heading {
+    font-size: 2rem;
 }
 
 .main-heading, .main-heading a {
@@ -37,23 +41,28 @@ body {
 
 .card {
     max-width: 400px;
-    background-color: var(--lightest-c);
+    background-color: var(--dark-c);
     border-radius: 10px;
     padding: 0;
-    margin: 2rem;
-    color: var(--darkest-c);
+    margin: 0 auto;
+    margin-top: 2rem;
+    color: var(--lightest-c);
     display: block;
+
 }
 
 .card h3 {
     text-align: center;
     font-weight: 800;
+    font-size: 1.5rem;
+    padding-top: 0.75rem;
 }
 
 .card p {
     width: 90%;
     padding: 1rem;
     margin: 0 auto;
+    font-size: 1.25rem;
 }
 
 .card img {
@@ -93,4 +102,8 @@ body {
 .not-found-card a {
     text-decoration: none;
     color: var(--dark-c);
+}
+
+.card .movie-img {
+    border-radius: 0;
 }

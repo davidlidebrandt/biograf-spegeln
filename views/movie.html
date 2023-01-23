@@ -5,7 +5,7 @@
         <div class="card">
             <h3>{{ movie.attributes.title }}</h3>
             {% set current = movie.attributes.image.url %}
-            <img src="{{ current }}" alt="Movie poster">
+            <img class="movie-img" src="{{ current }}" alt="Movie poster">
             <p>{{ movie.attributes.intro | md(false) | safe  }}</p>
         </div>
     {% else %}
