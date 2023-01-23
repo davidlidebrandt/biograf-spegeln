@@ -4,8 +4,9 @@
     {% if movie %}
         <div class="card">
             <h3>{{ movie.attributes.title }}</h3>
-            <img src="{{ movie.attributes.image.url }}" alt="Movie poster">
-            <p>{{ movie.attributes.intro }}</p>
+            {% set current = movie.attributes.image.url %}
+            <img src="{{ current }}" alt="Movie poster">
+            <p>{{ movie.attributes.intro | md(false) | safe  }}</p>
         </div>
     {% else %}
         <div class="not-found-card">
