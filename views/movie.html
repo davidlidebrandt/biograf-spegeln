@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main %}
+    {% if movie %}
+        <div class="card">
+            <h3>{{ movie.attributes.title }}</h3>
+            <img src="{{ movie.attributes.image.url }}" alt="Movie poster">
+            <p>{{ movie.attributes.intro }}</p>
+        </div>
+    {% else %}
+        <div class="not-found-card">
+            <h2>
+                Movie could not be found
+            </h2>
+            <a href="/">Back to home</a>
+        </div>
+    {% endif %}
+{% endblock %}

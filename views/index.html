@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+    {% if movies %}
+        {% for movie in movies %}
+            <a href="/{{ movie.id }}" class="card">
+                <img src="{{ movie.attributes.image.url }}" alt="Movie poster">
+            </a>
+        {% endfor %}
+    {% else %}
+            <div class="not-found-card">
+                <h3>Error fetching movies, please try again later</h3>
+            </div>
+    {% endif %}
+{% endblock %}
