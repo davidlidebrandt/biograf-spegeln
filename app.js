@@ -26,7 +26,7 @@ app.get("/", async (req,res)=> {
     }
 });
 
-app.get("/:id", async (req,res)=> {
+app.get("/movies/:id", async (req,res)=> {
     let movie;
     const id = req.params.id;
     try {

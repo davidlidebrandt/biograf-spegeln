@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 
+
+{% block css %}
+    <link rel="stylesheet" href="./css/main.css">
+{% endblock %}
+
+
 {% block main %}
     {% if movies %}
         {% for movie in movies %}
-            <a href="/{{ movie.id }}" class="card">
+            <a href="/movies/{{ movie.id }}" class="card">
                 <img src="{{ movie.attributes.image.url }}" alt="Movie poster">
             </a>
         {% endfor %}
