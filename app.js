@@ -37,6 +37,4 @@ app.get("/movies/:id", async (req,res)=> {
     }
 });
 
-app.listen(5080, ()=> {
-    console.log("Listening on port 5080......");
-});
+export default app;
