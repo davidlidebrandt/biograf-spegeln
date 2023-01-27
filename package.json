@@ -4,7 +4,7 @@
   "description": "Hej",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "start-dev": "nodemon index.js",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
   },
