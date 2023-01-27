@@ -107,3 +107,13 @@ body {
 .card .movie-img {
     border-radius: 0;
 }
+
+.welcome-heading {
+    display: block;
+    width: max-content;
+    background-color: var(--lightest-c);
+    border-radius: 10px;
+    color: var(--darkest-c);
+    padding: 1rem;
+    margin: 0 auto;
+}

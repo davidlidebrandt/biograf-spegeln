@@ -8,4 +8,4 @@ test('should include correct movie title and http status 200', async () => {
 
 test('should return http status 404 for invalid movie ID', async () => { 
     const res = await supertest(app).get("/movies/10000000").expect(404);
- })
+ });

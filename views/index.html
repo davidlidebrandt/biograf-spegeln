@@ -7,6 +7,7 @@
 
 
 {% block main %}
+    <h2 class="welcome-heading">Välkommen till Biograf Spegeln</h2>
     {% if movies %}
         {% for movie in movies %}
             <a href="/movies/{{ movie.id }}" class="card">
