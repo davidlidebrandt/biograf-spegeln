@@ -22,7 +22,7 @@ app.get("/", async (req,res)=> {
         movies = await axios.get("https://plankton-app-xhkom.ondigitalocean.app/api/movies");
         res.render("index.html",{"movies":movies.data.data});
     } catch(error) {
-        res.render("index.html",{"error":error});
+        res.status(error.response.status).render("index.html",{"error":error});
     }
 });
 
@@ -33,7 +33,7 @@ app.get("/movies/:id", async (req,res)=> {
         movie = await axios.get(`https://plankton-app-xhkom.ondigitalocean.app/api/movies/${id}`);
         res.render("movie.html", {"movie": movie.data.data});
     } catch(error) {
-        res.status(404).render("movie.html", {"error": error})
+        res.status(error.response.status).render("movie.html", {"error": error});
     }
 });
 
